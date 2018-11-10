@@ -26,8 +26,6 @@ export class NotesComponent implements OnInit {
 
   ngOnInit() {
     this.dataSource = new MatTableDataSource<Note>(this.notes);
-    console.log(this.notes);
-    console.log(this.dataSource);
   }
 
   applyFilter(filterValue: string) {
