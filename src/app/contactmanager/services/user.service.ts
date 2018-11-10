@@ -34,4 +34,8 @@ export class UserService {
         console.log("Failed to fetch users");
       });
   }
+
+  userById(id: number) {
+    return this.dataStore.users.find(x => x.id == id);
+  }
 }
