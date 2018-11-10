@@ -21,6 +21,7 @@ export class SidenavComponent implements OnInit {
   private isScreenSizeSmall: boolean = false;
 
   public users: Observable<User[]>;
+  public isDarkTheme: boolean = false;
   
   @ViewChild(MatSidenav) sidenav: MatSidenav;
 
@@ -53,6 +54,10 @@ export class SidenavComponent implements OnInit {
 
   isScreenSmall(): boolean {
     return this.isScreenSizeSmall;
+  }
+
+  toggleTheme() {
+    this.isDarkTheme = !this.isDarkTheme;
   }
 
 }
